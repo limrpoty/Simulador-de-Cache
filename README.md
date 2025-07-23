@@ -4,7 +4,7 @@ Um simulador de cache em C++ que permite o teste de diferentes configurações e
 
 ## Uso
 
-```bash
+``` bash
 ./cache_simulator <nsets> <bsize> <assoc> <substituição> <flag_saida> arquivo_de_entrada
 ```
 
@@ -34,7 +34,7 @@ A pasta `testes` contém alguns arquivos no formato binário exigido e em .txt p
 
 #### Exemplo 1: 
 
-```bash
+``` bash
 ./cache_simulator 256 4 1 R 1 testes/bin_100.bin
 ```
 
@@ -45,7 +45,7 @@ A pasta `testes` contém alguns arquivos no formato binário exigido e em .txt p
 
 #### Exemplo 2:
 
-```bash
+``` bash
 ./cache_simulator 512 8 2 R 1 testes/vortex.in.sem.persons.bin
 ```
 
