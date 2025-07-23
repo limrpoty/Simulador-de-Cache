@@ -41,7 +41,7 @@ A pasta `testes` contém alguns arquivos no formato binário exigido e em .txt p
 - Resultado: 
 	- flag 1: `100 0.9200 0.0800 1.00 0.00 0.00`
 	- flag 0:  
-		![[exemplo_1.png]]
+		![Exemplo 1]((https://github.com/limrpoty/Simulador-de-Cache/blob/main/imagens/exemplo_1.png))
 
 #### Exemplo 2:
 
