@@ -41,7 +41,7 @@ A pasta `testes` contém alguns arquivos no formato binário exigido e em .txt p
 - Resultado: 
 	- flag 1: `100 0.9200 0.0800 1.00 0.00 0.00`
 	- flag 0:  
-		<img src="https://github.com/limrpoty/Simulador-de-Cache/blob/main/imagens/exemplo_1.png" alt="Exemplo 1 - Tabela">
+		- <img src="https://github.com/limrpoty/Simulador-de-Cache/blob/main/imagens/exemplo_1.png" alt="Exemplo 1 - Tabela">
 
 #### Exemplo 2:
 
@@ -52,7 +52,7 @@ A pasta `testes` contém alguns arquivos no formato binário exigido e em .txt p
 - Resultado:
 	- flag 1: `186676 0.8787 0.1213 0.05 0.93 0.02`
 	- flag 0:
-		- ![[exemplo_2.png]]
+		- <img src="https://github.com/limrpoty/Simulador-de-Cache/blob/main/imagens/exemplo_2.png" alt="Exemplo 2 - Tabela">
 
 ## Autores
 - Fabrício Barbosa Viegas
