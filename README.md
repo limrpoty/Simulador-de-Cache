@@ -1,59 +1,58 @@
-## Simulador de Cache
+## Cache Simulator
 
-Um simulador de cache em C++ que permite o teste de diferentes configurações e políticas de substituição.
+A C++ cache simulator that allows testing of different configurations and replacement policies.
 
-## Uso
+## Usage
 
-``` bash
-./cache_simulator <nsets> <bsize> <assoc> <substituição> <flag_saida> arquivo_de_entrada
+```bash
+./cache_simulator <nsets> <bsize> <assoc> <replacement> <output_flag> input_file
 ```
 
-#### Parâmetros
+#### Parameters
 
-- ***cache_simulator:*** Nome do arquivo de execução principal do simulador
-- nsets: Número de conjuntos na cache (número total de “linhas” ou “entradas” da cache)
-- bsize: Tamanho do bloco em bytes
-- assoc: Grau de associatividade (número de vias ou blocos que cada conjunto possui)
-- substituição: Política de substituição
+- ***cache_simulator:*** Name of the main executable file for the simulator
+- nsets: Number of sets in the cache (total number of “lines” or “entries” in the cache)
+- bsize: Block size in bytes
+- assoc: Associativity degree (number of ways or blocks each set contains)
+- replacement: Replacement policy
 	- `R` - Random 
 	- `F` - FIFO (First In First Out)
-	- `L` LRU (Least Recently Used )
-- f lag_saida: Flag de saída dos dados
-	- `0`  - Saída com textos para melhor visualização
-	- `1` - Formato padrão seguindo a seguinte ordem: total de acessos, taxa de hit, taxa de miss, taxa de miss compulsório, taxa de miss de capacidade, taxa de miss de conflito
-- arquivo_de_entrada: Arquivo com os endereços para acesso à cache
+	- `L` - LRU (Least Recently Used)
+- output_flag: Output data flag
+	- `0` - Output with descriptive text for better visualization
+	- `1` - Standard format following this order: total accesses, hit rate, miss rate, compulsory miss rate, capacity miss rate, conflict miss rate
+- input_file: File containing addresses to be accessed in the cache
 
-##### Arquivo de Entrada
+##### Input File
 
-O arquivo de entrada será utilizado como entrada para o simulador (armazenado em formato binário) que conterá os endereços requisitados à cache (cada endereço possui 32 bits, em formato big endian).
+The input file will be used as input for the simulator (stored in binary format) and contains the requested cache addresses (each address is 32 bits, in big-endian format).
 
+### Usage Examples
 
-### Exemplos de Uso
+The `testes` folder contains some files in the required binary format and corresponding .txt files to facilitate visualization of values and understanding of cache behavior.
 
-A pasta `testes` contém alguns arquivos no formato binário exigido e em .txt para facilitar a visualização dos valores e o entendimento do comportamento da cache.
+#### Example 1:
 
-#### Exemplo 1: 
-
-``` bash
+```bash
 ./cache_simulator 256 4 1 R 1 testes/bin_100.bin
 ```
 
-- Resultado: 
+- Result:
 	- flag 1: `100 0.9200 0.0800 1.00 0.00 0.00`
 	- flag 0:  
-		- <img src="https://github.com/limrpoty/Simulador-de-Cache/blob/main/imagens/exemplo_1.png" alt="Exemplo 1 - Tabela">
+		- <img src="https://github.com/limrpoty/Simulador-de-Cache/blob/main/imagens/exemplo_1.png" alt="Example 1 - Table">
 
-#### Exemplo 2:
+#### Example 2:
 
-``` bash
+```bash
 ./cache_simulator 512 8 2 R 1 testes/vortex.in.sem.persons.bin
 ```
 
-- Resultado:
+- Result:
 	- flag 1: `186676 0.8787 0.1213 0.05 0.93 0.02`
 	- flag 0:
-		- <img src="https://github.com/limrpoty/Simulador-de-Cache/blob/main/imagens/exemplo_2.png" alt="Exemplo 2 - Tabela">
+		- <img src="https://github.com/limrpoty/Simulador-de-Cache/blob/main/imagens/exemplo_2.png" alt="Example 2 - Table">
 
-## Autores
+## Authors
 - Fabrício Barbosa Viegas
 - Marcos Lima Alves
